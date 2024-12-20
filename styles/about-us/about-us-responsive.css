@@ -1,0 +1,148 @@
+/* Small Devices (Mobile Phones) */
+@media (max-width: 650px) {
+    /* Header adjustments */
+    .header {
+        flex-direction: row;
+        padding: 10px;
+    }
+
+
+    .right-section {
+        position: fixed;
+        left: -150%;
+        top: 140px;
+        bottom: 0px;
+        gap:0;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .logo{
+        padding-left: 5px;
+    }
+
+    .right-section.active{
+        left: 0;
+    }
+
+    .left-section{
+        max-width: 645px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .header-links {
+        font-size: 16px;
+        padding: 5px;
+        margin: 16px 0;
+    }
+
+    .header-links-container{
+        animation: none;
+    }
+
+    .header-links:active{
+        color: lightcoral;
+    }
+
+    .hamburger{
+        display: block;
+        margin-right: 25px;
+        margin-top: 15px;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(10px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-10px) rotate(-45deg);
+    }
+
+    /* Content adjustments */
+    .about-us-image{
+        height: 200px;
+        width: 200px;
+        border-radius: 100px;
+    }
+
+    .about-us-text{
+        margin-top: 0px;
+        text-align: center;
+        font-size: 20px;
+        width: 280px;
+        line-height: 40px;
+    }
+    
+    .content-section-container{
+        height: 1100px;
+    }
+
+    .hand-image{
+        height: 200px;
+        width: 200px;
+    }
+  
+}
+
+
+@media(min-width: 651px) and (max-width: 1334px){
+    .header {
+        flex-direction: row;
+        padding: 10px;
+    }
+
+    .logo{
+        padding-left: 5px;
+    }
+
+    .right-section.active{
+        left: 0;
+    }
+
+    .left-section{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .header-links {
+        font-size: 16px;
+        padding: 5px;
+        margin: 16px 0;
+    }
+
+    .header-links-container{
+        animation: none;
+    }
+
+    .header-links:active{
+        color: lightcoral;
+    }
+
+    /* Content adjustments */
+    .about-us-image{
+        height: 400px;
+        width: 400px;
+        border-radius: 200px;
+    }
+
+    .about-us-text{
+        margin-top: 0px;
+        text-align: center;
+        font-size: 30px;
+        width: 580px;
+        line-height: 50px;
+    }
+    
+    .content-section-container{
+        height: 1350px;
+    }
+
+}

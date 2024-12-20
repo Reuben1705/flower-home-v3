@@ -1,0 +1,51 @@
+.content-section-container {
+    margin-top: 30px;
+    height: 1300px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 215, 224);
+}
+
+.about-us-image-container{
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.about-us-image{
+    height: 400px;
+    width: 400px;
+    border-radius: 200px;
+}
+
+.about-us-text-container{
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.about-us-text{
+    margin-top: 0px;
+    text-align: center;
+    font-size: 30px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    width: 780px;
+    line-height: 60px;
+}
+
+
+.hand-image-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.hand-image{
+    height: 300px;
+    width: 300px;
+}
+
+.header-links-container{
+    animation: none;
+}

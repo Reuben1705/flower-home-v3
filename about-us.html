@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>The Flowercake Girls</title>
+
+    <link rel="icon" type="image/x-icon" href="images/home/logo.jpg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anaheim:wght@400..800&display=swap" rel="stylesheet">
+
+
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="styles/general/header.css">
+    <link rel="stylesheet" href="styles/general/general.css">
+    <link rel="stylesheet" href="styles/about-us/content.css">
+    <link rel="stylesheet" href="styles/general/footer.css">
+    <link rel="stylesheet" href="styles/about-us/about-us-responsive.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+</head>
+
+<body>
+    
+    <!-- Header Section -->
+    <div class="header">
+        <div class="left-section">
+            <img class="logo" src="images/home/logo.jpg">
+            
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+
+        </div>
+        
+        <div class="right-section">
+            <div class="header-links-container"><a class="header-links" href="home.html">HOME</a></div>
+            <div class="header-links-container"><a class="header-links" href="order.html">ORDER</a></div>
+            <div class="header-links-container"><a class="header-links" href="prices.html">PRICES</a></div>
+            <div class="header-links-container"><a class="header-links" href="food-gallery.html">CAKE GALLERY</a></div>
+            <div class="header-links-container"><a class="header-links" href="home.html#form-title">CONTACT US</a></div>
+            <div class="header-links-container"><a class="header-links" href="about-us.html">ABOUT US</a></div>
+        </div>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content-section-container">
+
+        <div data-aos="fade-right" data-aos-duration="2000" class="about-us-image-container">
+            <img class="about-us-image" src="images/about-us/about-us.png">
+        </div>
+
+        <div data-aos="fade-down" data-aos-duration="2000" class="about-us-text-container">
+            <p class="about-us-text">We are 3 sisters with full time jobs very different to baking and cake decorating. We have been hobby bakers for a long time and finally decided to start a cake business in 2023. We love pretty things, gift giving and each other's company, all important factors of our business. We talk a lot, love a bit of silliness and don't take things too seriously making it a fun business.</p>
+        </div>
+
+        <div data-aos="fade-down" data-aos-duration="2000" class="hand-image-container">
+            <img class="hand-image" src="images/about-us/hand-image.png">
+        </div>
+
+    </div>
+
+
+    <!-- Footer Section -->
+    <div class="footer">
+
+        <div class="footer-links-container">
+            <a href="faqs.html" class="footer-links">FAQS</a>
+            <a href="testimonials.html" class="footer-links">Testimonials</a>
+        </div>
+
+        <div class="footer-text-container">
+            <p class="footer-title">The Flowercake Girls</p>
+
+            <div class="logo-footer-container">
+                <img class="logo-footer" src="images/home/logo.jpg">
+            </div>
+
+            <p class="footer-text">Find us on:</p>
+
+            <div class="icon-positioning">
+                <div class="icon-container">
+                    <a href="https://www.facebook.com/people/The-Flowercake-Girls/61552986122475/" target="_blank"><img class="icon" src="images/home/facebook.png"></a>
+                </div>
+
+                <div class="icon-container">
+                    <a href="https://www.instagram.com/theflowercakegirls/" target="_blank"><img class="icon" src="images/home/instagram.png"></a>
+                </div>
+            </div>
+            
+            <div class="creator-text-container">
+                <p class="footer-text">Website Created By Reuben and Misha</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for Hamburger Menu -->
+    <script>
+
+        const hamburger = document.querySelector(".hamburger");
+        const rightSection = document.querySelector(".right-section");
+
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            rightSection.classList.toggle("active");
+        })
+
+        document.querySelectorAll(".header-links").forEach(n => n.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            rightSection.classList.remove("active");
+        }))
+
+    </script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+    
+
+</body>
+</html>

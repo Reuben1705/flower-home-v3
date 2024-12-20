@@ -1,0 +1,92 @@
+.banner-container {
+    display: flex;
+    flex: 1;
+    padding: 0;
+    height: 615px;
+    position: relative;
+    overflow: hidden; /* Ensure only one image is visible */
+    filter: brightness(70%);
+}
+
+.slides {
+    display: flex;
+    transition: transform 1s ease-in-out;
+    width: 300%; /* Adjust based on the number of images (e.g., 3 images = 300%) */
+}
+
+.slide {
+    width: 100%;
+    height: 615px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+
+.glow-text {
+    position: absolute;
+    top: 40%; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-shadow: 1px 1px 10px #fff, 1px 1px 10px #ccc;
+    font-size: 80px;
+    font-family: "Dancing Script", cursive;
+    text-align: center;
+    animation: glow-text-load 1s;
+
+}
+
+.banner-button {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, 180%);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 40px;
+    font-size: 18px;
+    font-family: "Anaheim", sans-serif;
+    letter-spacing: 2px;
+    color: rgb(102, 102, 102);
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(237, 189, 201);
+    background-color: white;
+    cursor: pointer;
+    transition: background-color 0.25s, color 0.25s;
+    animation: button-load 1s;
+}
+
+.banner-button:hover {
+    background-color: rgb(237, 189, 201);
+    color: white;
+}
+
+.banner-button:active {
+    background-color: rgb(173, 138, 147);
+    color: rgb(197, 197, 197);
+}
+
+@keyframes glow-text-load {
+    0% {
+        transform: translate(-50%, -50%) translateY(-50px); /* Animate from slightly above the center */
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, -0%) translateY(0); /* End at center position */
+        opacity: 1;
+    }
+}
+
+@keyframes button-load {
+    0% {
+        transform: translate(-50%, 180%) translateY(50px); /* Animate from slightly below the center */
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, 180%) translateY(0); /* End at center position */
+        opacity: 1;
+    }
+}

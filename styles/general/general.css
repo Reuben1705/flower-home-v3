@@ -1,0 +1,24 @@
+body{
+    padding-top: 110px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.top-img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  
+  }
+
+.circle-image{
+display: flex;
+justify-content: center;
+margin: 2%;
+}
+

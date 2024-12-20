@@ -1,0 +1,106 @@
+.header{
+    height: 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: white;
+    border-bottom-width: 2px;
+    z-index: 100;
+}
+
+.left-section{
+    display: flex;
+    max-width: 200px;
+    flex: 1;
+    align-items: center;
+}
+
+.logo{
+    height: 105px;
+    object-fit: cover;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    padding-left: 30px;
+    width: 120px;
+}
+
+.right-section{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 30px;
+    min-width: 420px;
+    width: 300px;
+    max-width: 800px;
+}
+
+.header-links-container{
+    display: inline-block;
+    padding-top: 30px;
+    animation: links-load 2.5s ease-in-out;
+}
+
+.header-links {
+    font-family: nunito, sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0px;
+    color: black;
+    position: relative;
+    text-decoration: none;
+    padding-bottom: 2px; /* Adds space between text and underline */
+    display: inline-block;
+    transition: color 0.25s ;
+}
+
+.header-links:hover {
+    color: lightcoral;
+}
+
+.header-links::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0; /* Start with no width */
+    height: 1.5px; /* Thickness of the underline */
+    background-color: rgb(76, 76, 76); /* Color of the underline */
+    transform: translateX(-50%); /* Center the underline */
+    transition: width 0.2s ease; /* Animate only the width for smoother transition */
+}
+
+.header-links:hover::after {
+    width: 100%; /* Expand underline to full width */
+}
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+
+.bar{
+    display: block;
+    width: 30px;
+    height: 4px;
+    border-radius: 2px;
+    margin: 6px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: black;
+}
+
+@keyframes links-load {
+    0% {
+        transform: translateX(7500%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
