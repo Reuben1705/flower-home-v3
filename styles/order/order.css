@@ -1,0 +1,365 @@
+/* Small Devices (Mobile Phones) */
+@media (max-width: 650px)  {
+  /* Header adjustments */
+  .header {
+      flex-direction: row;
+      padding: 10px;
+  }
+
+  .right-section {
+      position: fixed;
+      left: -150%;
+      top: 140px;
+      bottom: 100px;
+      gap:0;
+      flex-direction: column;
+      background-color: white;
+      width: 100%;
+      text-align: center;
+      transition: 0.3s;
+  }
+
+  .logo{
+      padding-left: 5px;
+  }
+
+  .right-section.active{
+      left: 0;
+  }
+
+  .left-section{
+      max-width: 645px;
+      flex-direction: row;
+      justify-content: space-between;
+  }
+
+  .header-links {
+      font-size: 16px;
+      padding: 5px;
+      margin: 16px 0;
+  }
+
+  .header-links-container{
+      animation: none;
+  }
+
+  .header-links:active{
+      color: lightcoral;
+  }
+
+  .hamburger{
+      display: block;
+      margin-right: 25px;
+      margin-top: 15px;
+  }
+
+  .hamburger.active .bar:nth-child(2){
+      opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1){
+      transform: translateY(10px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3){
+      transform: translateY(-10px) rotate(-45deg);
+  }
+}
+
+/* Content adjustments */
+
+.price-list-title{
+  text-align: center;
+  font-family: 'Dancing Script', sans-serif ;
+  font-weight: 500;
+  font-size: 80px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding-top: 30px;
+
+}
+
+
+
+.title-position-grid{
+  padding: 30px;
+  display: flex;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+}
+
+.title-underline{
+  border-bottom: 4px solid;
+  display: inline-block;
+}
+
+.order-bg{
+  background-color: rgb(255, 245, 240);
+  height: auto;
+  width: auto;
+}
+
+.content-grid {
+  margin-left: 3%;
+  margin-right: 3%;
+  height: auto;
+  display:grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 40px;
+  row-gap: 40px ;
+}
+
+.image{
+  margin-top: 45px;
+  margin-bottom: 30px;
+  height: auto;
+  max-width: 700px;
+  width: 100%;
+  border-radius: 50%;
+  float: right;
+  object-fit: cover;
+}
+
+.order-text {
+  font-family: 'Nunito', sans-serif;
+  font-size: 45px;
+  font-weight: 700;
+  margin-bottom: 0;
+  width: 500px;
+}
+
+.order-context{
+  font-family: 'Nunito', sans-serif;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.button{
+  display: flex;
+  justify-content: left;
+  margin-bottom: 30px;
+}
+
+  .order-button{
+    text-decoration: none;
+    margin-top: 20px;
+    background-color: rgb(211, 41, 134);
+    font-size: 25px;
+    font-family: 'Nunito', sans-serif ;
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-top: 11px;
+    padding-bottom:13px;
+    color:white;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+
+
+  @property --bg-angle {
+    inherits: false;
+    initial-value: 0deg;
+    syntax: "<angle>";
+  }
+  
+  /**
+   * To animate the gradient, we set the custom property to 1 full
+   * rotation. The animation starts at the default value of `0deg`.
+   */
+  @keyframes spin {
+    to {
+      --bg-angle: 360deg;
+    }
+  }
+  
+  .order-button {
+    /* add the animation*/
+    animation: spin 3.5s infinite linear;
+    
+    background:
+      /* Modify the inner background gradient */
+      linear-gradient(
+          to bottom,
+          rgb(211, 41, 134), /* Start color */
+          rgb(211, 41, 134) /* End color */
+        )
+        padding-box, /* ends at inner border edges */
+      conic-gradient(
+        from var(--bg-angle) at 50% 50%, 
+        rgb(211, 41, 134) 0%, /* Start color (Pink) */
+        rgb(254, 127, 184) 100% /* End color (Red) */
+        )
+        border-box; /* extends to outer border edges */
+    
+    /* a clear border lets the background gradient shine through */
+    border: 6px solid transparent;
+  
+
+}
+
+@media(max-width:2000px){
+  .top-img{
+    display: none;
+  }
+}
+
+
+  
+@media (max-width: 850px){
+
+  .title-underline{
+    border-bottom: 0px solid;
+    display: inline-block;
+  }
+  
+ .image{
+  display: none;
+ }
+
+ .content-grid{
+  grid-template-columns: 1fr;
+  justify-content: center;
+  height: auto;
+ }
+
+ .order-button{
+  margin-left: 20%;
+  margin-right: 20%;
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-top: 11px;
+  padding-bottom:13px;
+  animation: spin 2.5s infinite linear
+}
+
+.price-list-title{
+  font-size: 65px;
+  font-weight: 800;
+}
+
+.title-position-grid{
+  padding: 30px;
+  display: flex;
+  grid-template-columns: 2fr 1fr 2fr;
+  justify-content: center;
+}
+
+.circle-image{
+  display: flex;
+  justify-content: center;
+}
+
+.top-img{
+  display: inline-block;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  margin-top: 50%;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+
+.content-grid{
+  column-gap: 25px;
+}
+
+.order-text{
+  margin-top: 20px;
+  width: 380px;
+}
+
+.button{
+  padding-top: 7px;
+  display: flex;
+  justify-content: center;
+}
+}
+
+@media (max-width: 415px){
+  .order-button{
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 11px;
+    padding-bottom:13px;
+  }
+
+  .order-text{
+    width: 350px;
+    margin-left: 2%;
+    margin-right: 2%;
+    font-size: 35px;
+  }
+
+  .price-list-title{
+    font-size: 65px;
+    font-weight: 800;
+  }
+
+  .title-position-grid{
+    padding: 30px;
+    display: flex;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+  }
+  
+  .circle-image1{
+    display: flex;
+    justify-content: right;
+    margin: 0;
+    
+  }
+
+  .top-img{
+    display: inline-block;
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    margin-top: 60%;
+  }
+
+  }
+
+  @media (max-width: 390px){
+    .top-img{
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    margin-top: 70%;
+    }
+  }
+
+  @media (max-width: 370px){
+    .top-img{
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    margin-top: 70%;
+    }
+  }
+
+  @media (max-width: 360px){
+    .top-img{
+    display: inline-block;
+    width: 67px;
+    height: 67px;
+    margin-top: 80%;
+    }
+
+  .order-text{
+    font-size: 30px;
+  }
+
+  .order-context{
+    font-size: 23px;
+    padding-left: 10px;
+  }
+
+  .price-list-title{
+    font-size: 55px;
+    font-weight: 800;
+  }
+  }
+  
